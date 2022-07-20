@@ -1,0 +1,92 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    perspective: 800px;
+    perspective-origin: bottom;
+}
+.cube{
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.cube .top{
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    transform: rotateX(90deg);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cube .back{
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    transform: translateY(50%) translateZ(-150px);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cube .front{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(123, 12, 178, 0.5);
+    transform: translateY(50%) translateZ(150px);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cube .left{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(64, 118, 255);
+    transform: rotateY(90deg) translateZ(-150px) translateY(150px);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cube .right{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(53, 255, 63);
+    transform: rotateY(90deg) translateZ(150px) translateY(150px);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cube .bottom{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    transform: rotatex(90deg) translateZ(-300px);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cube:hover{
+    animation-name: Rotation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Rotation {
+    from{
+        transform: rotateY(0deg);
+    }
+
+    to{
+        transform: rotateY(360deg);
+    }
+    
+}
